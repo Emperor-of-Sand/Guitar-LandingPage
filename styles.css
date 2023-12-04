@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    z-index: 1;
+    background-color: rgba(233, 237, 239, 0.8);
+}
+
+#page-wrapper {
+    position: relative;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+    background-color: #f9f9f9;
+    z-index: 100;
+}
+
+section {
+    padding-bottom: 50px;
+}
+
+button {
+    margin: 5px;
+}
+
+footer {
+    background-color: #151515;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+    padding: 3px 50px;
+    font-size: smaller;
+}
+
+.logo {
+    width: 20vw;
+}
+
+.logo>img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 50px;
+}
+
+
+nav {
+    font-weight: 500px;
+}
+
+nav>ul {
+    padding-left: 70%;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 50vh repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: 100vh;
+    margin-top: 10%;
+}
+
+.container>div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1/-1;
+}
+
+.container>div:nth-child(2) {
+    background-image: url('./DeanML.png');
+    transform: rotate(90deg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    grid-column: 2;
+    grid-row: span 4;
+
+}
+
+#specs {
+    padding-left: 60px;
+}
+
+#gtr-div {
+    padding-right: 60px;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2px;
+    margin: 20px 0;
+}
+
+dt {
+    font-weight: bold;
+    padding: 5px;
+}
+
+dd {
+    padding: 5px;
+    margin-left: 0;
+}
+
+dl {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+dt,
+dd {
+    border-bottom: 1px solid #ddd;
+}
+
+dt {
+    background-color: #f3f3f3;
+}
+
+dd:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+dd:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.hero h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.hero {
+    margin-top: 10vh;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    width: 25vh;
+    margin: 10px 0;
+}
+
+.btn {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+.btn:active {
+    opacity: .5;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#pricing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100%/3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.product>.card-title {
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.product>h2 {
+    margin-top: 15px;
+    padding-bottom: 3px;
+}
+
+.product>p {
+    padding: 0 150px 20px;
+}
+
+section#video {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    text-align: center;
+    padding: 20px;
+    margin: 0 50% auto;
+    border-radius: 30px;
+}
+
+section#video h2 {
+    margin-bottom: 20px;
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+    header {
+        position: fixed;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        text-align: center;
+    }
+
+    .logo {
+        grid-row: 1;
+        padding-left: 35%;
+        width: 100vw;
+    }
+
+    #nav-bar {
+        grid-row: 2;
+        margin-top: 10px;
+        padding-right: 35%;
+    }
+
+    #first-section {
+        padding-top: 60%;
+    }
+
+    nav li {
+
+        padding-bottom: 5px;
+    }
+
+    nav>ul {
+        width: 200px;
+        display: block;
+    }
+
+
+    .hero {
+        margin-top: 15vh;
+        margin-bottom: 2vh;
+    }
+
+    section {
+        margin-bottom: 5vh;
+    }
+
+    .container {
+        display: grid;
+        align-self: center;
+        height: 80vh;
+        margin-top: 5%;
+    }
+
+    .container>div:nth-child(1) {
+        margin-top: 10%;
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+
+    /* GTR Img */
+    .container>div:nth-child(2) {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        background-position: center;
+    }
+
+    #specs {
+        overflow-y: scroll;
+        padding: auto;
+        height: 40vh;
+    }
+
+    dl {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 5vh;
+    }
+
+    .video {
+        margin-top: 40vh;
+        padding-top: 10%;
+    }
+
+    iframe {
+        max-width: 300px;
+        border-radius: 10px;
+    }
+
+    #pricing {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .product {
+        margin-left: 20%;
+        width: 300px;
+        height: auto;
+    }
+
+    .product>.card-title {
+        background-color: #ddd;
+        color: black;
+        padding: 15px 0;
+        width: 100%;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    h1,
+    h2 {
+        margin-top: 15px;
+    }
+}
